@@ -1,0 +1,14 @@
+trigger:
+    batch: true
+    branches:
+      include:
+      - refs/tags/*
+
+stages:
+- stage: test
+  jobs:
+  - job:
+    displayName: test
+    steps: 
+    - bash: echo hello
+ 
